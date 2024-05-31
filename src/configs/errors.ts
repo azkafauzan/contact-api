@@ -1,9 +1,9 @@
 class Errors extends Error {
   public statusCode: number
-  constructor(message: string, statusCode: number) {
-    super(message)
+  public constructor(message: string, statusCode: number) {
+    super()
+    this.message = message
     this.statusCode = statusCode
-    Object.setPrototypeOf(this, Errors.prototype)
   }
 }
 
